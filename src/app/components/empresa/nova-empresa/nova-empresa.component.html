@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>{{data.titulo}}</h2>
+
+<mat-card>
+    <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input matInput type="text" [(ngModel)]="empresa.nome">
+        <button *ngIf="empresa.nome" matSuffix mat-icon-button aria-label="Clear" (click)="empresa.nome=''">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Cnpj</mat-label>
+        <input matInput type="text" [(ngModel)]="empresa.cnpj">
+        <button *ngIf="empresa.cnpj" matSuffix mat-icon-button aria-label="Clear" (click)="empresa.cnpj=''">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <mat-card-actions align="end">
+        <button mat-stroked-button color="primary">Cadastrar</button>
+    </mat-card-actions>
+</mat-card>
